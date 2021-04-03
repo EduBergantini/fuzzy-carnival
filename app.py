@@ -13,11 +13,11 @@ def autofill_form():
     if (chrome_driver == None):
         print("Variavel de ambiente não encontrada")
         return
-        
+
     option = webdriver.ChromeOptions()
     option.add_argument("-incognito")
     option.add_experimental_option("excludeSwitches", ['enable-automation']);
-    option.add_argument("--headless")
+    #option.add_argument("--headless")
     option.add_argument("disable-gpu")
     browser = webdriver.Chrome(executable_path=chrome_driver, options=option)
 
