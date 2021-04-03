@@ -10,6 +10,10 @@ def get_random_answer(min, total_options):
 
 def autofill_form():
     chrome_driver = os.getenv('CHROME_DRIVER')
+    if (chrome_driver == None):
+        print("Variavel de ambiente não encontrada")
+        return
+        
     option = webdriver.ChromeOptions()
     option.add_argument("-incognito")
     option.add_experimental_option("excludeSwitches", ['enable-automation']);
